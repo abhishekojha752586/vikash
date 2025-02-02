@@ -1,0 +1,72 @@
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    background: #f8f9fa; /* Light background color */
+    height: 9rem; /* Adjust as needed */
+    
+  }
+  
+  /* Responsive Typography */
+  .gradientText {
+    font-size: 2.5rem; /* Default font size */
+    font-weight: bold;
+    background: linear-gradient(to bottom,  #a171ba 40%, #aa87bd 20%, #381149 40%); /* Gradient colors */
+    -webkit-background-clip: text;
+    border-radius: 20px;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+    margin: 0;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.2;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .gradientText {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gradientText {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .container_aboutUs {
+    text-align: center;
+    border-radius: 20px;
+    padding: 50px 40px;
+    font-weight: bold;
+    background-color: #f5f5fc; /* Light background similar to the image */
+  }
+  
+  .title_aboutUs {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+  }
+  
+  .underline {
+    width: 80px;
+    height: 4px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #ff7b7b, #845ec2);
+    border-radius: 2px;
+  }
+  .underline1 {
+    width: 200px;
+    height: 4px;
+    margin: 10px auto 30px auto;
+    background: linear-gradient(to right, #ff7b7b, #845ec2);
+    border-radius: 2px;
+  }
+  
