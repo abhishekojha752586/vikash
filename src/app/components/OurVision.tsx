@@ -49,10 +49,11 @@ const OurVision: React.FC = () => {
               key={index}
               className="w-2 h-10 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full flame"
               style={{
-                "--base-transform": `rotate(${index * 45}deg) translateY(-50px)`,
+                ["--base-transform" as keyof React.CSSProperties]: `rotate(${index * 45}deg) translateY(-50px)`,
                 margin: "5px",
                 position: "absolute",
               }}
+              
             />
           ))}
         </div>

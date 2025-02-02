@@ -1,5 +1,5 @@
 // components/FeaturedCourses.tsx
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 type Course = {
   id: number;
@@ -67,11 +67,11 @@ const FeaturedCourses: React.FC = () => {
   const [coursesPerPage, setCoursesPerPage] = useState(1);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setStartIndex((prev) =>
       prev + coursesPerPage >= featuredCourses.length ? 0 : prev + coursesPerPage
     );
-  };
+  }, [coursesPerPage]); 
 
   const handlePrev = () => {
     setStartIndex((prev) =>

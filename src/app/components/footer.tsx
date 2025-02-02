@@ -1,5 +1,7 @@
 // components/Footer.tsx
 import React from 'react';
+import Link from 'next/link';
+
 
 const Footer: React.FC = () => {
   return (
@@ -18,9 +20,9 @@ const Footer: React.FC = () => {
           <div className="mb-8 sm:mb-0">
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <ul className="text-gray-400">
-              <li className="mb-2">Email: prakash231313@gmail.com</li>
-              <li className="mb-2" >Phone: +917522899459</li>
-              <li className="mb-2">Address: Kushaha Churaha, Jigna, Mirzapur, 231303</li>
+              <Link href="mailto:prakash231313@gmail.com" className="mb-2">Email: prakash231313@gmail.com </Link> 
+              <Link href="tel:+917522899459" className="mb-2">Phone: +917522899459</Link>
+              <Link href="#" className="mb-2">Address: Kushaha Churaha, Jigna, Mirzapur, 231303</Link>
             </ul>
           </div>
 
@@ -28,7 +30,7 @@ const Footer: React.FC = () => {
           <div className="mb-8 sm:mb-0">
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a
+              <Link
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -39,8 +41,8 @@ const Footer: React.FC = () => {
                   alt="Facebook"
                   className="w-6 h-6"
                 />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -51,8 +53,8 @@ const Footer: React.FC = () => {
                   alt="YouTube"
                   className="w-6 h-6"
                 />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -63,8 +65,8 @@ const Footer: React.FC = () => {
                   alt="LinkedIn"
                   className="w-6 h-6"
                 />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -75,7 +77,7 @@ const Footer: React.FC = () => {
                   alt="Instagram"
                   className="w-6 h-6"
                 />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -84,24 +86,24 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className=" text-gray-400">
               <li className="mb-2 ">
-                <a href="/courses" className="hover:text-white transition-colors no-underline">
+                <Link href="/courses" className="hover:text-white transition-colors no-underline">
                   Courses
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/about" className="hover:text-white transition-colors no-underline">
+                <Link href="/about" className="hover:text-white transition-colors no-underline">
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/contact" className="hover:text-white transition-colors no-underline">
+                <Link href="/contact" className="hover:text-white transition-colors no-underline">
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/#" className="hover:text-white transition-colors no-underline">
+                <Link href="/#" className="hover:text-white transition-colors no-underline">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -110,7 +112,7 @@ const Footer: React.FC = () => {
         {/* Developed By Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            Developed by <span className="text-white font-semibold"><a href="https://www.refllect.com/">Refllect</a></span> | © {new Date().getFullYear()} All Rights Reserved.
+            Developed by <span className="text-white font-semibold"><Link href="https://www.refllect.com/">Refllect</Link></span> | © {new Date().getFullYear()} All Rights Reserved.
           </p>
         </div>
       </div>

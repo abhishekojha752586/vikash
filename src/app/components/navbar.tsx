@@ -6,12 +6,12 @@ import Link from "next/link";
 
 
 const menuItems = [
-  { name: "Courses", href: "#courses" },
-  { name: "Admission", href: "https://forms.gle/bqKuCQ9H4AKjZEce9", _target: "_blank"},
-  { name: "About Us", href: "#aboutus" },
-  { name: "Result", href: "#result" },
-  { name: "Franchise", href: "https://forms.gle/VF8vPBbi6RYLtwLG9", _target: "_blank" },
-  { name: "Contact Us", href: "#footer" },
+  { name: "Courses", href: "#courses", isExternal: "false" },
+  { name: "Admission", href: "https://forms.gle/bqKuCQ9H4AKjZEce9", isExternal: "true" },
+  { name: "About Us", href: "#aboutus", isExternal: "false"  },
+  { name: "Result", href: "#result", isExternal: "false"  },
+  { name: "Franchise", href: "https://forms.gle/VF8vPBbi6RYLtwLG9",  isExternal: "true"  },
+  { name: "Contact Us", href: "#footer", isExternal: "false"  },
 ];
 
 export default function Navbar() {

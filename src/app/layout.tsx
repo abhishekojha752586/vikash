@@ -4,7 +4,7 @@ import "./globals.css";
 import {Providers} from "./providers";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Bootstrap from "./components/bootstrap";
-import Carousel from "./components/carousel";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
