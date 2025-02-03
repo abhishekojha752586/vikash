@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className=" text-gray-400">
               <li className="mb-2 ">
-                <Link href="/courses" className="hover:text-white transition-colors no-underline">
+                <Link href="/#courses" className="hover:text-white transition-colors no-underline">
                   Courses
                 </Link>
               </li>
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li className="mb-2">
-                <Link href="/contact" className="hover:text-white transition-colors no-underline">
+                <Link href="/#contact" className="hover:text-white transition-colors no-underline">
                   Contact Us
                 </Link>
               </li>
