@@ -1,8 +1,17 @@
-import type { NextConfig } from "next";
-
+/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  /* config options here */
-  return  [
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ik.imagekit.io',
+        port: '',
+        pathname: '/account123/**',
+      },
+    ],
+  },
+  async headers() {
+    return [
       {
         source: '/(.*)',
         headers: [
@@ -13,19 +22,7 @@ const nextConfig: NextConfig = {
         ],
       },
     ];
-};
-module.exports = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'ik.imagekit.io',
-        port: '',
-        pathname: '/account123/**',
-        search: '',
-      },
-    ],
   },
-}
+};
 
 export default nextConfig;
