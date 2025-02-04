@@ -25,8 +25,6 @@ export async function GET(request: NextRequest) {
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
-    
-
     const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID!, auth);
 
     // Load document info
@@ -35,8 +33,8 @@ export async function GET(request: NextRequest) {
     const rows = await sheet.getRows();
 
     // Find matching student
-    const student = rows.find(row => 
-      row.get('RollNo') === rollno && row.get('DOB') === dob
+    const student = rows.find(
+      (row) => row.get('RollNo') === rollno && row.get('DOB') === dob
     );
 
     if (!student) {
@@ -47,16 +45,27 @@ export async function GET(request: NextRequest) {
     const result = {
       name: student.get('StudentName'),
       marks: student.get('Percentage'), // Changed from Marks to Percentage
-      pdfUrl: `https://drive.google.com/uc?export=download&id=${student.get('PDFFileID')}`
+      pdfUrl: `https://drive.google.com/uc?export=download&id=${student.get('PDFFileID')}`,
     };
 
     const response = NextResponse.json(result);
-    response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=600');
+    response.headers.set(
+      'Cache-Control',
+      'public, s-maxage=3600, stale-while-revalidate=600'
+    );
     return response;
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('API Error:', error);
+
+    if (error instanceof Error) {
+      return NextResponse.json(
+        { error: error.message },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json(
-      { error: error.message || 'Server error' },
+      { error: 'An unexpected error occurred' },
       { status: 500 }
     );
   }

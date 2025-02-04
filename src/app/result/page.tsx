@@ -90,7 +90,7 @@ export default function ResultChecker() {
 
       {result && (
         <div className="mt-8 bg-blue-50 p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4">{result.name}'s Result</h2>
+          <h2 className="text-2xl font-semibold mb-4">{result.name}&apos;s Result</h2>
           <p className="text-lg mb-4">Total Percentage: {result.marks}</p>
           <a
             href={result.pdfUrl}
