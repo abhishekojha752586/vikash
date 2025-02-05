@@ -42,7 +42,7 @@ export default function ResultChecker() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-4">
+    <div className="max-w-3xl bg-slate-100 mx-auto p-4">
       <h1 className="text-3xl font-bold text-center mb-8">Check Your Result</h1>
 
       <form
