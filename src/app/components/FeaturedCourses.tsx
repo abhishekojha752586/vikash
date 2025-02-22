@@ -28,7 +28,7 @@ const featuredCourses: Course[] = [
     id: 3,
     title: 'CCC Course',
     rating: 4.5,
-    price: 5999,
+    price: 2999,
     image: 'https://ik.imagekit.io/abhishekojha/vikashCyber/Courses/CCC?updatedAt=1737433156101',
   },
   {
