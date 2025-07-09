@@ -37,6 +37,17 @@ export async function GET(request: NextRequest) {
       (row) => row.get('RollNo') === rollno && row.get('DOB') === dob
     );
 
+    console.log('Input Rollno:', rollno);
+    console.log('Input DOB:', dob);
+
+    rows.forEach((row) => {
+      console.log({
+        roll: row.get('RollNo'),
+        dob: row.get('DOB'),
+      });
+    });
+
+
     if (!student) {
       return NextResponse.json({ error: 'Result not found' }, { status: 404 });
     }
