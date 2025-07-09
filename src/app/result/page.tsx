@@ -57,7 +57,7 @@ export default function ResultChecker() {
             <input
               type="text"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
+              className="w-full px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm text-gray-800"
               value={formData.rollno}
               onChange={(e) =>
                 setFormData({ ...formData, rollno: e.target.value })
@@ -73,7 +73,7 @@ export default function ResultChecker() {
             <input
               type="date"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
+              className="w-full px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm text-gray-800"
               value={formData.dob}
               onChange={(e) =>
                 setFormData({ ...formData, dob: e.target.value })
